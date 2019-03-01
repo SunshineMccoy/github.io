@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Tribute to Bill Gates">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development,Microsoft,Development,Bill Gates">
+	<meta name="author" content="Michael McCoy">
+
+
+	<title>Michael's Homepage</title>
+</head>
+<style>
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+		z-index: 1;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+		z-index: 1;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+}
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+			flex-direction: column;
+			position: relative;
+			width: 30%;
+		}
+		#main {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 2%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+		#image {
+			width: 60%;
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#tribute-link {
+			text-decoration: underline;
+		}
+		#credit {
+			font-size: .8rem;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid lime 2px;
+		}
+	}
+
+	/*end of css standard across pages for desktop view*/
+
+
+</style>
+
+<body>
+	<!-- Nav Bar -->
+	<div id="wrapper">
+	<div id='topBar'>
+		<div class="box"></div>
+
+		<nav class="flex-container">
+			<div class="header">
+				<a href="#"><h3> Home </h3></a>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+			</div>
+			<div class="title">
+				<h1> Michael McCoy's Site </h1>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
+			</div>
+			<div class='header'>
+				<a href="https://michaelmccoy.me/mccoy-resume.pdf"><h3> Resume </h3></a>
+			</div>
+			<div id='menu'>
+				<div class='dropdown'>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class='dropdown-menu' id='dropdownMenu'>
+						<a class='dropdown-item' href='#'><h3>Home</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
+			</div>
+
+
+
+
+		</nav>
+		<div class="box"></div>
+	</div>
+	<div id="main">
+		<br>
+		<div>
+			<h2 id="title"> Tribute to Bill Gates </h2>
+			<p> Bill Gates is a brilliant software engineer and a caring philanthropist.</p>
+		</div>
+		<div id="img-div" class="flex-container">
+			<img  id="image" alt="Bill Gates"src="bill.jpg"></img>
+			<p id="img-caption">Bill Gates Speaking About Malaria at TED 2009
+			</p>
+		</div>
+		<p id="tribute-info">William Henry Gates III, KBE, DFBCS (born October 28, 1955) is an American business magnate, investor, author, philanthropist, and humanitarian. He is best known as the principal founder of Microsoft Corporation. During his career at Microsoft, Gates held the positions of chairman, CEO and chief software architect, while also being the largest individual shareholder until May 2014.
+			<br>
+			<br>
+			In 1975, Gates and Paul Allen launched Microsoft, which became the world's largest PC software company. Gates led the company as chief executive officer until stepping down in January 2000, but he remained as chairman and created the position of chief software architect for himself.
+		</p><p>
+			In June 2006, Gates announced that he would be transitioning from full-time work at Microsoft to part-time work and full-time work at the Bill & Melinda Gates Foundation, which was established in 2000. He gradually transferred his duties to Ray Ozzie and Craig Mundie. He stepped down as chairman of Microsoft in February 2014 and assumed a new post as technology adviser to support the newly appointed CEO Satya Nadella.
+		</p>
+		<p>
+			Please visit <a id="tribute-link" href="https://en.wikipedia.org/wiki/Bill_Gates" target="_blank">Wikipedia</a> for more information.
+		</p>
+		<p id="credit">
+			Photo credit: Bill Gates by redmaxwell (2009) https://flickr.com/photos/@N00/4308789843/
+			<br>
+			Attribution, Non Commercial (http://creativecommons.org/licenses/by-nc/2.0/)
+		</p>
+
+
+
+	<script>
+		function displayMenu() {
+			document.querySelector(".dropdown-menu").classList.toggle("expand");
+		}
+	</script>
+
+	</div>
+	</body>
+	</html>

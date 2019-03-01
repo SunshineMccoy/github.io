@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Web Development Site">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
+	<meta name="author" content="Michael McCoy">
+
+	<title>My First Website</title>
+</head>
+<style>
+  
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+		margin-bottom: 3rem;
+	}
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+    margin: 0;
+    padding: 0;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+}
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 400px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+			flex-direction: column;
+			position: sticky;
+      top: 0;
+      height: 100vh;
+			width: 30%;
+		}
+		#main {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 2%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+      height: 60vh;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid lime 2px;
+		}
+	}
+
+	/*end of css standard across pages for desktop view*/
+
+</style>
+
+<body>
+	<!-- Nav Bar -->
+	<div id="wrapper">
+	<div id="topBar">
+		<div class="box"></div>
+
+		<nav class="flex-container">
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me"><h3> Home </h3></a>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+			</div>
+			<div class="link-top title">
+				<h1> Michael McCoy's Site </h1>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/mccoy-resume.pdf"><h3> Resume </h3></a>
+			</div>
+			<div class="link-top" id="menu">
+				<div>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class="dropdown-menu" id="dropdownMenu">
+						<a class="dropdown-item" href="https://michaelmccoy.me"><h3>Home</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/blog"><h3>Blog</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/portfolio"><h3>Portfolio</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/mccoy-resume.pdf"><h3>Resume</h3></a>
+			</div>
+
+
+
+
+		</nav>
+		<div class="box"></div>
+	</div>
+	<div id="main">
+
+		<div>
+			<h1>My First Website!</h1>
+		</div>
+		<br>
+		<br>
+		<p>08/25/2018</p>
+		<p>
+      Hello World! This is my very first website! I coded it by hand using HTML, CSS, and JavaScript. While I do have some experience using jQuery and Bootstrap,
+			I wanted to start out with a site that does not use any libraries, frameworks, or preprocessors. I built this site both to practice the web development skills
+			that I have been learning recently, to document my learn-to-code journey through this blog, and to serve as a portfolio of the coding projects that I build.
+    </p>
+    <p>
+			My first experience using code was a few years ago, while I was in college, where I used some R and SQL while working for an institute that did research into International Relations scholarship.
+			While I haven't continued to learn data science, I was surprised by how much I enjoyed using code. The ability to be able to manually tell a computer what to do and to have
+			your code be read, understood, and to see the result just feels so powerful. I then took Khan Academy's intro to HTML and CSS course to learn the basics, just for fun!
+		</p>
+		<p>
+			About a year ago I started to realize that software development could be an actual career for me, even without a computer science degree, and started following freeCodeCamp's online curriculum.
+			Unfortunately, I have had a little trouble making steady progress since then. I have recently been looking into more structured (and less free) bootcamps that would help
+			prevent me from getting stuck in my progress.
+		</p>
+		<p>
+			A week ago I finished Lambda School's free web development mini bootcamp, which I highly recommend. The instructor did an excellent job
+			explaining a lot of JavaScript fundamentals, which helped me to really understand a few concepts that I had seen before but not quite internalized. I also watched and followed
+			along with Gordon Zhu's Watch and Code intro curriculum, which I also recommend for many of the same reasons. His examples provided the basis of the 'To-Do List' project in my portfolio.
+		</p>
+		<p>
+			Going forward, I am going to continue to look into coding bootcamps. However, while I do that I will use this site to hold myself accountable to continue to learn! Every weekend
+			I will post a blog post detailing what I learned or did that week! I do plan on continuing to use freeCodeCamp's curriculum for the time being. Well, thank you to anyone
+			who bothered to read my rambling post, and check back next week!
+		</p>
+	</div>
+</div>
+
+
+
+	<script>
+		function displayMenu() {
+			document.querySelector(".dropdown-menu").classList.toggle("expand");
+		}
+	</script>
+
+
+	</body>
+	</html>

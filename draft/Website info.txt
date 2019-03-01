@@ -1,0 +1,11 @@
+https://my.1and1.com/Dashboard
+Customer ID: 567911995
+Password: Sunshine1!
+1&1 Pin: 2409
+
+SFTP info:
+	username for SFTP: u93009038
+	Pass for SFTP: HagridBoy1!
+	Server: home730093106.1and1-data.host
+	port: 22
+	Protocol SFTP

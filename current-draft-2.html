@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Web Development Site">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
+	<meta name="author" content="Michael McCoy">
+
+
+	<title>Michael's Homepage</title>
+</head>
+<style>
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+}
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+			flex-direction: column;
+			position: relative;
+			width: 30%;
+		}
+		#main {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 2%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid lime 2px;
+		}
+	}
+
+	/*end of css standard across pages for desktop view*/
+
+
+</style>
+
+<body>
+	<!-- Nav Bar -->
+	<div id="wrapper">
+	<div id='topBar'>
+		<div class="box"></div>
+
+		<nav class="flex-container">
+			<div class="header">
+				<a href="#"><h3> Home </h3></a>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+			</div>
+			<div class="title">
+				<h1> Michael McCoy's Site </h1>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
+			</div>
+			<div class='header'>
+				<a href="https://michaelmccoy.me/mccoy-resume.pdf"><h3> Resume </h3></a>
+			</div>
+			<div id='menu'>
+				<div class='dropdown'>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class='dropdown-menu' id='dropdownMenu'>
+						<a class='dropdown-item' href='#'><h3>Home</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
+			</div>
+
+
+
+
+		</nav>
+		<div class="box"></div>
+	</div>
+	<div id="main">
+		<br>
+		<div>
+			<h2> Hello World!</h2>
+			<p> My name is Michael McCoy and I am an aspiring web developer living in Norfolk, Virginia.
+				I have been learning how to code in JavaScript using the freecodecamp.org curriculum. This website is going to serve as a coding portfolio and blog to
+				document my coding journey! </p>
+		</div>
+		<br>
+		<br>
+		<div>
+			<h2> Contact </h2>
+			<p> Please send any emails to email@michaelmccoy.me and I'll get back to you ASAP! You can also find me at
+				<a href="https://www.linkedin.com/in/mccoymichaelj/" style = "text-decoration: underline">linkedin</a> and
+				<a href="https://github.com/SunshineMccoy" style = "text-decoration: underline">github</a> .
+			</p>
+
+		</div>
+		<br>
+		<br>
+		<div>
+			<a href="https://michaelmccoy.me/blog/my-first-website"><h2> Latest Blog Post </h2></a>
+			<p>       Hello World! This is my very first website! I coded it by hand using HTML, CSS, and JavaScript. While I do have some experience using jQuery and Bootstrap,
+						I wanted to start out with a site that does not use any libraries, frameworks, or preprocessors. I built this site both to practice the web development skills
+						that I have been learning recently, to document my learn-to-code journey through this blog, and to serve as a portfolio of the coding projects that I build...</p>
+		</div>
+	</div>
+</div>
+
+
+
+	<script>
+		function displayMenu() {
+			document.querySelector(".dropdown-menu").classList.toggle("expand");
+		}
+	</script>
+
+	</div>
+	</body>
+	</html>

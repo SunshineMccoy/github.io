@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Technical Documentation Page">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
+	<meta name="author" content="Michael McCoy">
+
+
+	<title>Michael's Technical Documentation Page</title>
+</head>
+<style>
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+  li {
+    font-size: 1.4rem;
+  }
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+    margin: 0;
+    padding: 0;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+  }
+  #last_para {
+    margin-bottom:0px;
+  }
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	@media only screen and (min-device-width: 780px) {
+
+		#header {
+      flex-direction: row;
+      height: 7.5vh;
+			max-width: 100%;
+			background-color: black;
+		}
+		#main-doc {
+			max-width: 100%;
+			padding-left: 5%;
+			padding-right: 5%;
+			position: relative;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: column;
+			position: sticky;
+			top: 0;
+			z-index: 1;
+		}
+		#header-img {
+			width: 75px;
+		}
+		#tribute-link {
+			text-decoration: underline;
+		}
+		#credit {
+			font-size: .8rem;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+      height: 7.5vh;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+		.main-section {
+			padding-top: 50px;
+		}
+
+		nav {
+			border-bottom: solid lime 2px;
+		}
+    main {
+      display: absolute;
+    }
+		video {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+</style>
+
+</head>
+
+<body>
+  <div id="wrapper">
+	<header id='header'>
+
+
+		<nav id="nav-bar"class="flex-container">
+
+      <div class="header">
+        <img alt="logo" src="logo.jpg" id="header-img"></img>
+      </div>
+      <div class="header">
+				<a class="nav-link" href="#section_0"><h3> Section 0</h3></a>
+			</div>
+			<div class="header">
+				<a class="nav-link" href="#section_1"><h3> Video </h3></a>
+			</div>
+			<div class="header">
+				<a class="nav-link" href="#section_2"><h3> Contact </h3></a>
+			</div>
+			<div class='header'>
+				<a class="nav-link" href="#section_3"><h3> Section 3 </h3></a>
+			</div>
+      <div class="header">
+        <a class="nav-link" href="#section_4"><h3> Section 4 </h3></a>
+      </div>
+			<div id='menu'>
+				<div class='dropdown'>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class='dropdown-menu' id='dropdownMenu'>
+						<a class="dropdown-item" href='#'><h3>Home</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
+            <a class="dropdown-item" href=""><h3> Section 4 </h3></a>
+			</div>
+
+
+
+
+		</nav>
+	</header>
+  </div>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="section_0">
+      <header class="main-header">
+        <h1>Section 0</h1>
+
+      </header>
+
+      <!--Lorem Ipsum text is from lipsum.com-->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p>Mauris ullamcorper viverra neque id ornare. Pellentesque velit massa, molestie id neque sed, suscipit commodo risus. Maecenas vitae aliquam nulla. Vestibulum sollicitudin egestas rutrum. Morbi ut quam eu ante hendrerit interdum interdum in turpis. Aenean et felis hendrerit turpis feugiat dictum. Maecenas fermentum ac est a malesuada. Maecenas non elit id dolor ullamcorper viverra. Fusce a ultricies arcu. Nam blandit tincidunt lobortis. Quisque enim nisi, ultricies vel augue nec, placerat congue lorem. Donec efficitur pellentesque blandit. Quisque id maximus nibh. Aliquam eu sem vitae ante lacinia tempus vel ut nisl. </p>
+      <code>   </code>
+      <ul id="list">
+        <li>List Item 0</li>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </section>
+
+    <section class="main-section" id="section_1">
+      <header class="main-header">
+        <h1>Video</h1>
+      </header>
+
+			<video id="video" width="400" controls>
+				<source src="cat_video.mp4" type="video/mp4">
+				</source>
+			</video>
+    </section>
+
+    <section class="main-section" id="section_2">
+      <header class="main-header">
+        <h1>Contact</h1>
+
+      </header>
+      <p> Please enter your email below! </p>
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<input id="email" type="email" placeholder="email address" name="email">
+				<input id="submit" type="submit">
+			</form>
+    </section>
+
+    <section class="main-section" id="section_3">
+      <header class="main-header">
+        <h1>Section 3</h1>
+
+      </header>
+      <p>Phasellus nec nisl interdum, cursus eros vitae, sagittis ex. Morbi at tortor ac ex pharetra tempor. Proin ultricies, lacus ac tempor euismod, est libero interdum dui, eget ultricies purus est eu turpis. Donec rutrum rhoncus sapien, id efficitur libero consequat a. Aliquam non mattis quam, ac luctus tellus. Proin a nisl eget est pulvinar blandit. Aenean quis tristique ex. In sed commodo justo. Aenean massa ligula, facilisis eu congue elementum, fringilla vitae urna. </p>
+      <p>Nulla hendrerit risus sed tortor sollicitudin, vitae pharetra mi blandit. Aliquam ut scelerisque massa. In consectetur vulputate pharetra. Curabitur venenatis gravida ante, sed porta erat ultricies eu. Aliquam vulputate tristique fermentum. Sed id erat non leo imperdiet dignissim eu egestas enim. Suspendisse lobortis quis diam eget accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi et lobortis orci, vulputate eleifend est. Sed tristique lacinia augue, at cursus ligula. Nullam dapibus, risus eget viverra rutrum, dolor tortor mollis velit, at rutrum felis ante ac turpis. Cras in lorem vitae nibh congue sagittis. Pellentesque iaculis vel ipsum in suscipit. Quisque et leo consequat, scelerisque ante a, hendrerit enim. Donec vulputate sed quam eget eleifend.</p>
+      <code>   </code>
+    </section>
+
+    <section class="main-section" id="section_4">
+      <header class="main-header">
+        <h1>Section 4</h1>
+
+      </header>
+      <p>Etiam faucibus massa non tortor scelerisque, a hendrerit ipsum aliquet. Donec tincidunt scelerisque turpis a sodales. Aliquam blandit ex non pulvinar facilisis. Phasellus accumsan porttitor maximus. Proin elementum pharetra lorem non commodo. Fusce sapien leo, pretium vitae sagittis eget, tincidunt a felis. Vestibulum vitae lacus lorem. </p>
+      <p id="last_para">Suspendisse consectetur neque sed nibh gravida, sit amet auctor lacus pellentesque. Praesent pretium elit accumsan, ultrices tortor ut, egestas orci. Nullam enim mauris, gravida at condimentum gravida, tincidunt nec orci. Quisque at dictum augue. Pellentesque consectetur efficitur risus non mollis. Ut venenatis odio quis lorem accumsan pretium. Phasellus scelerisque diam urna, ut iaculis risus molestie in. Praesent tortor lorem, elementum sed laoreet at, convallis finibus lorem. Vestibulum eu neque urna. Cras tellus turpis, fermentum a dolor ut, pulvinar sagittis arcu. Integer quis erat sed leo lobortis facilisis at in quam. Proin efficitur sem augue, sit amet auctor tellus tristique nec. Pellentesque laoreet nisi at tellus pretium, at ullamcorper nibh egestas. Nulla nec dignissim urna. Ut dapibus vitae est sit amet bibendum. </p>
+      <code>   </code>
+    </section>
+
+  </main>

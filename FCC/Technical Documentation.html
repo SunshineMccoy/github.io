@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Technical Documentation Page">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
+	<meta name="author" content="Michael McCoy">
+
+
+	<title>Michael's Technical Documentation Page</title>
+</head>
+<style>
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+		z-index: 1;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+		z-index: 1;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+  li {
+    font-size: 1.4rem;
+  }
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+    margin: 0;
+    padding: 0;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+  }
+  #last_para {
+    margin-bottom:0px;
+  }
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+      flex-direction: column;
+			position: sticky;
+      top: 0;
+      height: 100vh;
+			width: 30%;
+		}
+		#main-doc {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 2%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+		#image {
+			width: 60%;
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#tribute-link {
+			text-decoration: underline;
+		}
+		#credit {
+			font-size: .8rem;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+      height: 60vh;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid lime 2px;
+		}
+	}
+
+</style>
+
+</head>
+
+<body>
+  <div id="wrapper">
+	<div id='topBar'>
+		<div class="box"></div>
+
+		<nav id="navbar"class="flex-container">
+      <header class="title">
+        <h1> Michael McCoy's Site </h1>
+      </header>
+			<div class="header">
+				<a class="nav-link" href="#section_0"><h3> Section 0</h3></a>
+			</div>
+			<div class="header">
+				<a class="nav-link" href="#section_1"><h3> Section 1 </h3></a>
+			</div>
+			<div class="header">
+				<a class="nav-link" href="#section_2"><h3> Section 2 </h3></a>
+			</div>
+			<div class='header'>
+				<a class="nav-link" href="#section_3"><h3> Section 3 </h3></a>
+			</div>
+      <div class="header">
+        <a class="nav-link" href="#section_4"><h3> Section 4 </h3></a>
+      </div>
+			<div id='menu'>
+				<div class='dropdown'>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class='dropdown-menu' id='dropdownMenu'>
+						<a class="dropdown-item" href='#'><h3>Home</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
+						<a class="dropdown-item" href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
+            <a class="dropdown-item" href=""><h3> Section 4 </h3></a>
+			</div>
+
+
+
+
+		</nav>
+    <div class="box"></div>
+  </div>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="section_0">
+      <header>
+        <h1>Section 0</h1>
+
+      </header>
+
+      <!--Lorem Ipsum text is from lipsum.com-->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p>Mauris ullamcorper viverra neque id ornare. Pellentesque velit massa, molestie id neque sed, suscipit commodo risus. Maecenas vitae aliquam nulla. Vestibulum sollicitudin egestas rutrum. Morbi ut quam eu ante hendrerit interdum interdum in turpis. Aenean et felis hendrerit turpis feugiat dictum. Maecenas fermentum ac est a malesuada. Maecenas non elit id dolor ullamcorper viverra. Fusce a ultricies arcu. Nam blandit tincidunt lobortis. Quisque enim nisi, ultricies vel augue nec, placerat congue lorem. Donec efficitur pellentesque blandit. Quisque id maximus nibh. Aliquam eu sem vitae ante lacinia tempus vel ut nisl. </p>
+      <code>   </code>
+      <ul id="list">
+        <li>List Item 0</li>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </section>
+
+    <section class="main-section" id="section_1">
+      <header>
+        <h1>Section 1</h1>
+
+      </header>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec massa id dui dignissim congue. Cras mattis justo dignissim,
+        tincidunt nibh id, maximus diam. Cras quis mollis risus. Praesent sodales porttitor tristique. Nunc egestas placerat luctus.
+        Nunc sollicitudin hendrerit ex at sodales. Curabitur ullamcorper neque nec mauris hendrerit sollicitudin. In feugiat, sem eu faucibus facilisis,
+        lectus ex elementum augue, ac auctor nulla sem at ex. Donec gravida ac metus quis ornare. In aliquet finibus mauris at efficitur.
+        Vivamus vel mi a sapien ultricies interdum euismod in diam. </p>
+      <p>Nulla molestie interdum risus vel elementum. Proin ac bibendum tellus. Donec sit amet sem id augue finibus ultricies ac et justo.
+        Suspendisse venenatis tortor id ornare ullamcorper. In non commodo neque, sit amet vehicula eros. Etiam cursus augue ut scelerisque commodo.
+        Cras rhoncus massa consectetur urna mollis posuere. Nam consectetur justo sed hendrerit accumsan. Sed elit mauris, sollicitudin quis dolor id,
+        vulputate rutrum elit. Curabitur nec dignissim sapien, in pulvinar felis. Vestibulum eros ante, interdum sed erat in, posuere dictum nisi.
+        Cras non nunc vel metus iaculis luctus. Praesent tincidunt metus velit, a tempor justo venenatis id. Ut vel porta tellus. Donec placerat sit amet odio in lacinia.
+        Vivamus suscipit purus eget libero tempus, eget aliquet elit rutrum. </p>
+      <code>   </code>
+    </section>
+
+    <section class="main-section" id="section_2">
+      <header>
+        <h1>Section 2</h1>
+
+      </header>
+      <p>Phasellus a suscipit nunc, id lobortis ligula. Donec ac tortor vel turpis sodales pulvinar. Ut tristique pharetra dui, eu vestibulum nisi ultricies eu. Phasellus ut finibus odio. Vivamus arcu lorem, vehicula non sapien in, facilisis volutpat arcu. Sed leo ante, maximus in libero quis, bibendum eleifend nisl. Sed et libero at nisi tincidunt mollis quis ut arcu. Aliquam erat volutpat. Praesent augue odio, laoreet id iaculis at, placerat et lectus. Nam sit amet fermentum ex, eget vestibulum libero. Maecenas et elit dolor. Phasellus in dui accumsan dolor porta faucibus sed vel dui. Pellentesque gravida turpis et augue efficitur, in dapibus nulla faucibus. Maecenas a porta metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      <p>Vestibulum id tincidunt tellus, et volutpat metus. Cras pharetra sapien vitae convallis maximus. Donec dignissim sem id risus fermentum, in commodo massa pulvinar. Nullam vel ex at tellus tempor finibus sed id leo. Praesent arcu lorem, sagittis non faucibus id, scelerisque vitae quam. Fusce nisi libero, euismod ut orci sed, sagittis euismod enim. Donec scelerisque justo non erat scelerisque convallis. Curabitur placerat vitae felis a tristique. Nullam iaculis gravida augue, vel dictum tortor volutpat vitae. Donec gravida porttitor quam ut aliquam. Fusce a convallis tellus, vitae ultrices augue. Maecenas in arcu eleifend, porttitor arcu sit amet, commodo nisl. </p>
+      <code>   </code>
+    </section>
+
+    <section class="main-section" id="section_3">
+      <header>
+        <h1>Section 3</h1>
+
+      </header>
+      <p>Phasellus nec nisl interdum, cursus eros vitae, sagittis ex. Morbi at tortor ac ex pharetra tempor. Proin ultricies, lacus ac tempor euismod, est libero interdum dui, eget ultricies purus est eu turpis. Donec rutrum rhoncus sapien, id efficitur libero consequat a. Aliquam non mattis quam, ac luctus tellus. Proin a nisl eget est pulvinar blandit. Aenean quis tristique ex. In sed commodo justo. Aenean massa ligula, facilisis eu congue elementum, fringilla vitae urna. </p>
+      <p>Nulla hendrerit risus sed tortor sollicitudin, vitae pharetra mi blandit. Aliquam ut scelerisque massa. In consectetur vulputate pharetra. Curabitur venenatis gravida ante, sed porta erat ultricies eu. Aliquam vulputate tristique fermentum. Sed id erat non leo imperdiet dignissim eu egestas enim. Suspendisse lobortis quis diam eget accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi et lobortis orci, vulputate eleifend est. Sed tristique lacinia augue, at cursus ligula. Nullam dapibus, risus eget viverra rutrum, dolor tortor mollis velit, at rutrum felis ante ac turpis. Cras in lorem vitae nibh congue sagittis. Pellentesque iaculis vel ipsum in suscipit. Quisque et leo consequat, scelerisque ante a, hendrerit enim. Donec vulputate sed quam eget eleifend.</p>
+      <code>   </code>
+    </section>
+
+    <section class="main-section" id="section_4">
+      <header>
+        <h1>Section 4</h1>
+
+      </header>
+      <p>Etiam faucibus massa non tortor scelerisque, a hendrerit ipsum aliquet. Donec tincidunt scelerisque turpis a sodales. Aliquam blandit ex non pulvinar facilisis. Phasellus accumsan porttitor maximus. Proin elementum pharetra lorem non commodo. Fusce sapien leo, pretium vitae sagittis eget, tincidunt a felis. Vestibulum vitae lacus lorem. </p>
+      <p id="last_para">Suspendisse consectetur neque sed nibh gravida, sit amet auctor lacus pellentesque. Praesent pretium elit accumsan, ultrices tortor ut, egestas orci. Nullam enim mauris, gravida at condimentum gravida, tincidunt nec orci. Quisque at dictum augue. Pellentesque consectetur efficitur risus non mollis. Ut venenatis odio quis lorem accumsan pretium. Phasellus scelerisque diam urna, ut iaculis risus molestie in. Praesent tortor lorem, elementum sed laoreet at, convallis finibus lorem. Vestibulum eu neque urna. Cras tellus turpis, fermentum a dolor ut, pulvinar sagittis arcu. Integer quis erat sed leo lobortis facilisis at in quam. Proin efficitur sem augue, sit amet auctor tellus tristique nec. Pellentesque laoreet nisi at tellus pretium, at ullamcorper nibh egestas. Nulla nec dignissim urna. Ut dapibus vitae est sit amet bibendum. </p>
+      <code>   </code>
+    </section>
+
+  </main>

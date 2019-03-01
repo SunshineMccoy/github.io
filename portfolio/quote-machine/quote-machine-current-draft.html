@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Michael McCoy's Web Development Site">
+	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
+	<meta name="author" content="Michael McCoy">
+
+	<title>Michael's Quote Machine</title>
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style>
+
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: lime;
+		font-size: 62.5%;
+	}
+
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: lime;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.8rem;
+		font-weight: normal;
+	}
+	h3 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: lime;
+		border: 1px solid lime;
+		text-decoration: none;
+	}
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid lime;
+		border-bottom: 1px solid lime;
+		margin-top: 5px;
+		justify-content: center;
+}
+
+	.header {
+		display: none;
+	}
+	.hide {
+		display: none;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+/*end of css standard across pages for mobile view*/
+
+	li {
+		font-size: 1rem;
+	}
+
+	#quotation {
+		font-size: 1.6rem;
+	}
+	#new-quote:hover {
+		cursor: pointer;
+	}
+	#twitter {
+		color: white;
+		margin: 10px;
+		background-color: rgb(0, 172, 237);
+		display: inline-block;
+		font-size: 18px;
+	}
+	#author {
+		font-size: 2rem;
+		margin-top: -40px;
+		margin-bottom: 60px;
+	}
+
+	.blog-posts {
+		font-size: 1rem;
+	}
+	.other-box {
+  	margin-left: auto;
+  	margin-right: auto;
+  	border-radius: 10px;
+		border: solid lime 2px;
+		position: relative;
+	}
+	.other-main {
+	  width: 400px;
+	}
+	.container {
+	  width: 150px;
+	  height: 80px;
+	  margin-left: auto;
+	  margin-right: auto;
+		display: flex;
+	}
+	.click-box {
+	  display: inline-block;
+		width: 80px;
+	  height: 80px;
+	  margin: 10px;
+	  font-size: 18px;
+	  line-height: 30px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+			flex-direction: column;
+			position: relative;
+			width: 30%;
+		}
+		#main {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-top: 2%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid lime 2px;
+		}
+	}
+	/*end of css standard across pages for desktop view*/
+	.other-main {
+		width: 750px;
+	}
+
+
+</style>
+
+<body>
+	<!-- Nav Bar -->
+	<div id="wrapper">
+	<div id='topBar'>
+		<div class="box"></div>
+
+		<nav class="flex-container">
+			<div class="header">
+				<a href="https://michaelmccoy.me"><h3> Home </h3></a>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+			</div>
+			<div class="title">
+				<h1> Michael McCoy's Site </h1>
+			</div>
+			<div class="header">
+				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
+			</div>
+			<div class='header'>
+				<a href="https://michaelmccoy.me/mccoy-resume.pdf"><h3> Resume </h3></a>
+			</div>
+			<div id='menu'>
+				<div class='dropdown'>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class='dropdown-menu' id='dropdownMenu'>
+						<a class='dropdown-item' href='https://michaelmccoy.me'><h3>Home</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
+						<a class='dropdown-item' href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
+			</div>
+
+
+
+
+		</nav>
+		<div class="box"></div>
+	</div>
+	<div id="main">
+
+		<div>
+			<h1>Random Quote Machine</h1>
+
+			<div class="other-main other-box">
+				<p id="quotation"> quote </p>
+				<br>
+				<br>
+				<p id="author"> author </p>
+			</div>
+
+			<div class="container">
+				<a class="other-box click-box" id="twitter" href="https://twitter.com/intent/tweet?text=Hello%20world">
+					<p> Tweet </p>
+				</a>
+				<div class="other-box click-box" id="new-quote" onClick="newQuote()">
+					<p> Quote </p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+
+	</div>
+</div>
+
+
+
+	<script>
+		$(document).ready(function() {
+				newQuote();
+		});
+
+			function newQuote() {
+				$.post({
+					url: "https://api.forismatic.com/api/1.0/",
+					jsonp: "jsonp",
+					data: {
+						method: "getQuote",
+						lang: "en",
+						format: "jsonp"
+					},
+					dataType: "jsonp",
+					success: function(resp) {
+					//Quotation update
+						document.getElementById("quotation").innerHTML = resp.quoteText;
+						var quote = document.getElementById("quotation").innerHTML;
+						var encodedQuote = encodeURIComponent(quote);
+						//Author Update
+						document.getElementById("author").innerHTML = resp.quoteAuthor;
+						var author = document.getElementById("author").innerHTML;
+						var encodedAuthor = encodeURIComponent(author);
+						//twitter text update
+						document.getElementById("twitter").setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodedQuote + " - " + encodedAuthor);
+					}
+				});
+			}
+	</script>
+
+	</div>
+	</body>
+	</html>

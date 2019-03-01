@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>My First Website</title>
+</head>
+<style>
+
+	body {
+		font-family: "Courier New", Courier;
+		background-color: #C0C0C0;
+		font-size: 62.5%;
+
+	}
+	/* I wanted to have the links look just like normal text */
+	a, a:link, a:visited, a:hover, a:active {
+	color: black;
+	text-decoration: none;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2rem;
+		font-weight: normal;
+	}
+	h2 {
+		text-align: center;
+		font-size: 1.6rem;
+		font-weight: normal;
+	}
+	h3 {
+		text-align: center;
+		font-size: 1.6rem;
+		font-weight: normal;
+	}
+	p {
+		text-align: center;
+		font-size: 1rem;
+	}
+	#main {
+		position: relative;
+	}
+	#dropdownMenuButton {
+		background-color: inherit;
+		color: black;
+		border: 1px solid black;
+		text-decoration: none;
+	}
+
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	#dropdownMenuClick {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		margin-top: 5px;
+		justify-content: center;
+	}
+
+	.header {
+		display: none;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.btn {
+		justify-content: flex-end;
+		position: relative;
+		align-self: auto;
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		transition: all .5s linear;
+		max-height: 20px;
+	}
+	.dropdown-menu.expand {
+		max-height: 300px;
+	}
+
+	.blog-posts {
+		font-size: 1.6rem;
+	}
+
+
+	@media only screen and (min-device-width: 780px) {
+
+		#topBar {
+			flex-direction: column;
+			position: relative;
+			width: 30%;
+		}
+		#main {
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+		#menu {
+			display: none;
+		}
+		#wrapper {
+			flex-direction: row;
+		}
+
+		.box {
+			height: 20vh;
+		}
+		.header {
+			display: block;
+		}
+		.title {
+			display: block;
+		}
+
+		.flex-container {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.dropdown-menu {
+			display: none;
+		}
+
+		nav {
+			border-right: solid black 2px;
+		}
+	}
+
+
+</style>
+
+<body>
+	<!-- Nav Bar -->
+	<div id="wrapper">
+	<div id="topBar">
+		<div class="box"></div>
+
+		<nav class="flex-container">
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me"><h3> Home </h3></a>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+			</div>
+			<div class="link-top title">
+				<h1> Michael McCoy's Site </h1>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
+			</div>
+			<div class="link-top header">
+				<a href="https://michaelmccoy.me/mccoy-resume.pdf"><h3> Resume </h3></a>
+			</div>
+			<div class="link-top" id="menu">
+				<div>
+					<div id="dropdownMenuClick" onclick="displayMenu()">
+						<p>Menu</p>
+					</div>
+				</div>
+				</div>
+			<div class="dropdown-menu" id="dropdownMenu">
+						<a class="dropdown-item" href="https://michaelmccoy.me"><h3>Home</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/blog"><h3>Blog</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/portfolio"><h3>Portfolio</h3></a>
+						<a class="dropdown-item" href="https://michaelmccoy.me/mccoy-resume.pdf"><h3>Resume</h3></a>
+			</div>
+
+
+
+
+		</nav>
+		<div class="box"></div>
+	</div>
+	<div id="main">
+
+		<div>
+			<h1> My Blog Posts</h1>
+			<a class="blog-posts" href="https://michaelmccoy.me/blog/my-first-website"> My First Website! - 08/25/2018</a>
+		</div>
+		<br>
+		<br>
+
+	</div>
+</div>
+
+
+
+	<script>
+		function displayMenu() {
+			document.querySelector(".dropdown-menu").classList.toggle("expand");
+		}
+	</script>
+
+	</div>
+	</body>
+	</html>

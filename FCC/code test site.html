@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+
+<meta charset="utf-8"/>
+
+<title> Code Testing Page </title>
+
+
+<p> this page is just to check code </p>
+
+
+</html>
+<script>
+
+function palindrome(str) {
+  // Good luck!
+ for (var i = 0; i < str.length; i++) {
+    if (str.charCodeAt(i) < 48 ) {
+      str.substr(i, 1);
+    }
+  }
+
+  console.log(str);
+  return true;
+}
+
+
+
+palindrome("#eye");
+
+</script>
