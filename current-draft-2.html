@@ -7,6 +7,7 @@
 	<meta name="description" content="Michael McCoy's Web Development Site">
 	<meta name="keywords" content="HTML,CSS,JavaScript,blog,development">
 	<meta name="author" content="Michael McCoy">
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
 
 
 	<title>Michael's Homepage</title>
@@ -14,15 +15,18 @@
 <style>
 
 	body {
-		font-family: "Courier New", Courier;
-		background-color: black;
-		color: lime;
+		font-family: 'Cutive Mono', monospace;
+		background-image: linear-gradient(to bottom right, rgb(255, 253, 208), #F6F6F6);
+		color: navy;
 		font-size: 62.5%;
+		height: 100vh;
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 
 	/* I wanted to have the links look just like normal text */
 	a, a:link, a:visited, a:hover, a:active {
-	color: lime;
+	color: navy;
 	text-decoration: none;
 	}
 	h1 {
@@ -49,21 +53,20 @@
 	}
 	#dropdownMenuButton {
 		background-color: inherit;
-		color: lime;
-		border: 1px solid lime;
+		color: navy;
+		border: 1px solid navy;
 		text-decoration: none;
 	}
-	#wrapper {
-		display: flex;
-		flex-direction: column;
-	}
 	#dropdownMenuClick {
-		border-top: 1px solid lime;
-		border-bottom: 1px solid lime;
+		border-top: 1px solid navy;
+		border-bottom: 1px solid navy;
 		margin-top: 5px;
 		justify-content: center;
 }
-
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
 	.header {
 		display: none;
 	}
@@ -108,10 +111,14 @@
 		#menu {
 			display: none;
 		}
-		#wrapper {
-			flex-direction: row;
+		#project-description {
+			margin-left: 20px;
 		}
 
+		.wrapper {
+			flex-direction: row;
+			align-items: center
+		}
 		.box {
 			height: 20vh;
 		}
@@ -131,7 +138,7 @@
 		}
 
 		nav {
-			border-right: solid lime 2px;
+			border-right: solid navy 2px;
 		}
 	}
 
@@ -142,19 +149,16 @@
 
 <body>
 	<!-- Nav Bar -->
-	<div id="wrapper">
+	<div class="wrapper">
 	<div id='topBar'>
 		<div class="box"></div>
 
 		<nav class="flex-container">
 			<div class="header">
-				<a href="#"><h3> Home </h3></a>
-			</div>
-			<div class="header">
-				<a href="https://michaelmccoy.me/blog"><h3> Blog </h3></a>
+				<h1> Michael McCoy's Site </h1>
 			</div>
 			<div class="title">
-				<h1> Michael McCoy's Site </h1>
+				<a href="#"><h3> Home </h3></a>
 			</div>
 			<div class="header">
 				<a href="https://michaelmccoy.me/portfolio"><h3> Portfolio </h3></a>
@@ -171,7 +175,6 @@
 				</div>
 			<div class='dropdown-menu' id='dropdownMenu'>
 						<a class='dropdown-item' href='#'><h3>Home</h3></a><br>
-						<a class='dropdown-item' href='https://michaelmccoy.me/blog'><h3>Blog</h3></a><br>
 						<a class='dropdown-item' href='https://michaelmccoy.me/portfolio'><h3>Portfolio</h3></a><br>
 						<a class='dropdown-item' href='https://michaelmccoy.me/mccoy-resume.pdf'><h3>Resume</h3></a>
 			</div>
@@ -187,7 +190,7 @@
 		<div>
 			<h2> Hello World!</h2>
 			<p> My name is Michael McCoy and I am an aspiring web developer living in Norfolk, Virginia.
-				I have been learning how to code in JavaScript using the freecodecamp.org curriculum. This website is going to serve as a coding portfolio and blog to
+				I have been learning how to code in JavaScript using the freeCodeCamp curriculum. This website is going to serve as a coding portfolio and homebase to
 				document my coding journey! </p>
 		</div>
 		<br>
@@ -203,10 +206,12 @@
 		<br>
 		<br>
 		<div>
-			<a href="https://michaelmccoy.me/blog/my-first-website"><h2> Latest Blog Post </h2></a>
-			<p>       Hello World! This is my very first website! I coded it by hand using HTML, CSS, and JavaScript. While I do have some experience using jQuery and Bootstrap,
-						I wanted to start out with a site that does not use any libraries, frameworks, or preprocessors. I built this site both to practice the web development skills
-						that I have been learning recently, to document my learn-to-code journey through this blog, and to serve as a portfolio of the coding projects that I build...</p>
+			<h2> Latest Project </h2>
+			<div class='wrapper'>
+				<a href="https://codepen.io/SunshineMcCoy/pen/dLZbqm"><img src="pomodoro.PNG" alt="screenshot" height="200px" width="200px"></img></a>
+				<p id="project-description"> This project is a React app that provides a timer for the user to track session and break times for use with the pomodoro technique. 
+					The user can set different lengths for the sessions and breaks and the app uses state to count down and automatically switch back and forth. </p>
+			</div>
 		</div>
 	</div>
 </div>
